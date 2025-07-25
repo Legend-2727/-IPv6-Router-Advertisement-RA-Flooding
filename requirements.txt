@@ -1,0 +1,3 @@
+scapy>=2.5.0      # packet crafting + sniffing
+tqdm              # nice progress bars (Milestone 2)
+colorlog          # colored logging output
