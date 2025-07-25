@@ -1,3 +1,7 @@
 scapy>=2.5.0      # packet crafting + sniffing
+tqdm              # nice progress bars (Milestone 2)
+colorlog          # colored logging output
+psutil            # system and network interface information
+netifaces         # network interface detailspy>=2.5.0      # packet crafting + sniffing
 tqdm              # nice progress bars (Milestone 2)
 colorlog          # colored logging output
