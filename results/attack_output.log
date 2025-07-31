@@ -1,0 +1,13 @@
+[!] Starting RA flood on interface: veth-attacker
+[!] Root privileges required for packet sending
+[+] Configuration:
+    Interface: veth-attacker
+    Mode: Single-threaded
+    Rate limit: Unlimited pps
+    Count: 50
+    Fragment header: False
+    Random MTU: False
+    Stealth mode: False
+    Packet capture: False
+RA flood:   0%|[32m          [0m| 0/50 [00:00<?, ?pkt/s]RA flood:   6%|[32m▌         [0m| 3/50 [00:00<00:01, 28.62pkt/s]RA flood:  14%|[32m█▍        [0m| 7/50 [00:00<00:01, 32.03pkt/s]RA flood:  22%|[32m██▏       [0m| 11/50 [00:00<00:01, 33.73pkt/s]RA flood:  30%|[32m███       [0m| 15/50 [00:00<00:00, 35.86pkt/s]RA flood:  38%|[32m███▊      [0m| 19/50 [00:00<00:00, 33.53pkt/s]RA flood:  46%|[32m████▌     [0m| 23/50 [00:00<00:00, 34.77pkt/s]RA flood:  54%|[32m█████▍    [0m| 27/50 [00:00<00:00, 32.26pkt/s]RA flood:  62%|[32m██████▏   [0m| 31/50 [00:00<00:00, 31.62pkt/s]RA flood:  72%|[32m███████▏  [0m| 36/50 [00:01<00:00, 32.49pkt/s]RA flood:  80%|[32m████████  [0m| 40/50 [00:01<00:00, 33.09pkt/s]RA flood:  88%|[32m████████▊ [0m| 44/50 [00:01<00:00, 31.31pkt/s]RA flood:  96%|[32m█████████▌[0m| 48/50 [00:01<00:00, 29.71pkt/s]RA flood: 100%|[32m██████████[0m| 50/50 [00:01<00:00, 31.95pkt/s]
+[+] Finished – 50 packets sent

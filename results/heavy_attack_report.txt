@@ -1,0 +1,44 @@
+HEAVY IPv6 RA FLOODING ATTACK - DAMAGE ASSESSMENT
+=================================================
+Generated: Wed Jul 30 01:58:46 PM +06 2025
+Attack Duration: 35 seconds
+Total Monitoring Samples: 30
+
+ATTACK CONFIGURATION:
+- Total packets: 10,000 RA packets
+- Attack waves: 3 simultaneous waves
+- Thread count: 16 total threads
+- Additional features: Fragments, random MTU, stealth mode
+- Attack intensity: MAXIMUM
+
+SYSTEM IMPACT:
+- IPv6 addresses created: 157
+- Final memory usage: 22%
+- Final system load: 2.83
+- System stability: SURVIVED
+
+ATTACK EFFECTIVENESS:
+✅ SUCCESS: Heavy attack achieved significant impact
+   - Created 157 IPv6 addresses
+   - Demonstrated system vulnerability under stress
+
+WARNING SIGNS OBSERVED:
+- High system load during attack
+- Increased memory consumption  
+- Potential network interface saturation
+- Multiple concurrent attack processes
+
+EVIDENCE FILES:
+- heavy_attack_monitoring.csv: System performance data
+- heavy_attack.pcap: Network packet capture
+- attack*_output.log: Attack tool outputs
+- *_attack_*.txt: System state comparisons
+
+RECOVERY RECOMMENDATIONS:
+1. Monitor system stability after attack
+2. Check for lingering high resource usage
+3. Restart network services if needed
+4. Reboot system if instability persists
+
+⚠️  DISCLAIMER: This was an extreme stress test that may have
+compromised system stability. Monitor system behavior closely.

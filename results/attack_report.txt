@@ -1,0 +1,59 @@
+IPv6 RA FLOODING ATTACK - DEMONSTRATION REPORT
+==============================================
+Generated: Wed Jul 30 01:53:53 PM +06 2025
+Attack Duration: 3 seconds
+
+NETWORK CONFIGURATION:
+- Attacker: 2001:db8:cafe::1/64
+- Victim: 2001:db8:cafe::2/64
+- Test Environment: Isolated network namespaces
+
+BASELINE STATE:
+- Dynamic IPv6 addresses: 0
+- Total IPv6 addresses: 2
+- System limit (max_addresses):  16
+- Baseline connectivity: 10/10 successful
+
+ATTACK PARAMETERS:
+- Packet count: 50 RA packets
+- Attack method: Random prefix generation
+- Thread count: Single-threaded
+- Packet rate: Unlimited
+
+ATTACK RESULTS:
+- Dynamic addresses created: 14
+- Final dynamic addresses: 14
+- Final total addresses: 16
+- System capacity used: 16/ 16 (100%)
+- Post-attack connectivity: 10/10 successful
+- Average response time: 81ms
+
+ATTACK EFFECTIVENESS:
+✅ SUCCESS: IPv6 address exhaustion demonstrated
+   - Created 14 new IPv6 addresses
+   - Consumed additional network resources
+   - Demonstrated RA flooding vulnerability
+ℹ️  NETWORK IMPACT: Minimal connectivity impact
+   - Network remained largely responsive
+
+EVIDENCE FILES:
+- attack_monitoring.csv: Real-time monitoring data
+- attack_packets.pcap: Network packet capture
+- attack_output.log: Attack tool output
+- attack_report.txt: This comprehensive report
+
+INTERPRETATION:
+This demonstration shows IPv6 Router Advertisement flooding attack
+capability. The attack successfully creates multiple IPv6 addresses
+by sending RA packets with unique prefixes, causing the victim to
+perform SLAAC (Stateless Address Autoconfiguration) for each prefix.
+
+The consistent creation of exactly 14 addresses demonstrates the
+system's max_addresses limit (16 total: 2 baseline + 14 dynamic).
+This represents successful IPv6 address space exhaustion.
+
+SECURITY IMPLICATIONS:
+- IPv6 address table exhaustion
+- Potential routing table bloat
+- Memory consumption on victim system
+- Network monitoring evasion through multiple addresses
